@@ -3,10 +3,10 @@ package com.wy.study.service.iml;
 import com.wy.study.entity.Area;
 import com.wy.study.mapper.AreaMapper;
 import com.wy.study.service.AreaService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Created by wy_ms on 2017/06/10.
@@ -24,5 +24,10 @@ public class AreaServiceIml implements AreaService {
         area.setArea("武昌区");
         area = areaMapper.getById(id);
         return area;
+    }
+
+    @Override
+    public List<Area> getAll() {
+        return areaMapper.getAll();
     }
 }

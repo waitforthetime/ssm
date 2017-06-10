@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * Created by wy_ms on 2017/06/10.
  */
@@ -26,5 +28,11 @@ public class AreaController {
         logger.info("id:{}",id);
         return service.getAreaById(id);
     }
+
+    @RequestMapping("/all/info")
+    public List<Area> getAll() {
+        return service.getAll();
+    }
+
 
 }
